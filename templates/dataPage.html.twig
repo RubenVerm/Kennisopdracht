@@ -109,10 +109,10 @@
 							<tbody>
 								{% for item in data %}
 									<tr>
-										<td>{{ item.source }}</td>
+										<td><a href={{ item.source }} target="_blank">{{ item.source }}</a></td>
 										<td>{{ item.name }}</td>
 										<td>{{ item['direct-dependency'] }}</td>
-										<td>{{ item.homepage }}</td>
+										<td> <a href={{ item.homepage }} target="_blank">{{ item.homepage }}</a></td>
 										<td>{{ item.version }}</td>
 										<td>{{ item.latest }}</td>
 										<td>{{ item['latest-status'] }}</td>
