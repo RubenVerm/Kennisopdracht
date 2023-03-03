@@ -20,14 +20,16 @@ class DataController extends AbstractController
 
         $packages = [];
 
+
+        // Load the contents of the JSON file into a variable
+        // Decode the JSON into an associative array
+        // Access the installed property on the array
         foreach ($finder as $file) {
-            // Load the contents of the JSON file into a variable
+            
             $jsonFile = $file->getContents();
 
-            // Decode the JSON into an associative array
             $data = json_decode($jsonFile, true);
-
-            // Access the installed property on the array
+            
             $packages = array_merge($packages, $data['installed']);
         }
 
